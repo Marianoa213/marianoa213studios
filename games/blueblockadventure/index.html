@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>La aventura de bloque azul - ANDROID VERSION</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+<meta name="generator" content="Scirra Construct">
+	<meta name="author" content="Marianoa213">
+	<meta name="description" content="hola">
+	<link rel="manifest" href="appmanifest.json">
+	<link rel="apple-touch-icon" sizes="128x128" href="icons/icono-128.png">
+	<link rel="apple-touch-icon" sizes="256x256" href="icons/icono-256.png">
+	<link rel="apple-touch-icon" sizes="512x512" href="icons/icono-512.png">
+	<link rel="icon" type="image/png" href="icons/icono-512.png">
+	<meta name="theme-color" content="#009dff">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<script>
+if (location.protocol.substr(0, 4) === "file")
+{
+	alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+}
+</script>
+
+	<noscript>
+		<div id="notSupportedWrap">
+			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
+			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+		</div>
+	</noscript>
+	<script src="scripts/supportcheck.js"></script>
+	<script src="scripts/offlineclient.js" type="module"></script>
+	<script src="scripts/main.js" type="module"></script>
+	<script src="scripts/register-sw.js" type="module"></script>
+
+	<script>
+
+		if (document.fullscreenEnabled) {
+			const fullscreen_button = document.createElement("button");
+			fullscreen_button.setAttribute('id','fullscreen-button');
+			fullscreen_button.addEventListener("click", toggle_fullscreen);
+			fullscreen_button.innerHTML  = `
+				<svg viewBox="0 0 24 24">
+					<path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" fill="white" style="background-color:black"/>
+				</svg>
+				<svg viewBox="0 0 24 24">
+					<path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z" fill="white" style="background-color:black"/>
+				</svg>
+			`;
+			document.body.appendChild(fullscreen_button);
+		}
+
+		function toggle_fullscreen() {
+			if (!document.fullscreenElement) {
+				document.body.requestFullscreen();
+				document.body.setAttribute("fullscreen",""); 
+			}
+		} 
+	</script>
+	
+</body>
+</html>
