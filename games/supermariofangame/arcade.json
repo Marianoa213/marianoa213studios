@@ -1,0 +1,32 @@
+﻿{
+	"name": "Super Mario Fangame",
+	"version": "1.0.0",
+	"description": "la primer version",
+	"id": "como.Marianoa213.SuperMarioFangame",
+	"viewport-width": 1000,
+	"viewport-height": 500,
+	"author": "Marianoa213",
+	"email": "marianogalvarezv@gmail.com",
+	"website": "http://miprimerjuego",
+	"orientations": "landscape",
+	"c2version": "270",
+	"ife": false,
+	"used-plugins": [
+		"Audio",
+		"Browser",
+		"Button",
+		"Keyboard",
+		"Mouse",
+		"Sprite",
+		"Text",
+		"TextBox",
+		"TiledBg",
+		"gamepad"
+	],
+	"used-behaviors": [
+		"Platform",
+		"jumpthru",
+		"scrollto",
+		"solid"
+	]
+}
